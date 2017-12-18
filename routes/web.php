@@ -11,8 +11,25 @@
 |
 */
 
-Route::get('/', function () {
+$controller  = function () {
     return view('welcome');
-});
+};
+
+Route::get('/', $controller);
 
 Route ::get ('/siswa', "SiswaController@index");
+
+Route::get('/siswa/add', "SiswaController@add");
+Route::post('/siswa/add', "SiswaController@add");
+
+Route::get('siswa/edit/{id_siswa}', "SiswaController@edit");
+Route::post('siswa/edit/{nama_siswa}', "SiswaController@edit");
+
+Route::get('/siswa/view/{id_siswa}', "SiswaController@view");
+//Route::get('/siswa/view/{nama_siswa}', "SiswaController@view");
+
+Route::post('/siswa/delete', "SiswaController@delete");
+
+Route::get('/media', "MediaController@index");
+Route::get('/media/upload', "MediaController@upload");
+Route::post('/media/upload', "MediaController@upload");

@@ -1,5 +1,5 @@
 
-@extends('layout2')
+@extends('layouts.app')
 
 @section('content')
 
@@ -28,8 +28,7 @@
   <td>{{ $siswas->id}}</td>
   <td>{{ $siswas->name}}</td>
  <td><a href="/siswa/view/{{ $siswas->id }}" class="btn btn-small btn-success">View Data</a></td>
- <td><a href="/siswa/delete/" class="btn btn-small btn-success">Upload</a></td>
-  
+ <td><a href="/siswa/view/{{ $siswas->id }}">View</a></td>
   </tr>  
   @endforeach
 

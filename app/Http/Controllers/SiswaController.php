@@ -13,6 +13,12 @@ class SiswaController extends Controller {
         return view ('siswa/index', $data);
     }
 
+    public function __construct()
+    {
+      //security check apakah user sudah login atau belum, jika belum akan ke redirect ke login
+      $this->middleware('auth');
+    }
+
     function add(Request $request) {
         
             $data = [

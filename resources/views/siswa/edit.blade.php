@@ -24,6 +24,7 @@
           <button type="submit" class="btn btn-success btn-small">Submit</button>
           <a class="btn btn-default" href="/siswa">Back to List</a>
         </div>
+        {{ csrf_field() }}
       </form>
 
     </div>

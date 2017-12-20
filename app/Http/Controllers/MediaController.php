@@ -7,6 +7,12 @@ use Illuminate\Http\Request;
 
 class MediaController extends Controller {
 
+  public function __construct()
+  {
+    //security check apakah user sudah login atau belum, jika belum akan ke redirect ke login
+    $this->middleware('auth');
+  }
+
   function upload(Request $request) {
 
     $success = false;

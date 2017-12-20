@@ -1,4 +1,4 @@
-@extends('layout2')
+@extends('layouts.app')
 
 @section('content')
 
@@ -31,6 +31,8 @@
             
           <a class="btn btn-default" href="/siswa">Back to List</a>
         </div>
+        <!-- CSRF untuk security -->
+        {{ csrf_field() }}
       </form>
 
     </div>

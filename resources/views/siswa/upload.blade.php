@@ -25,6 +25,7 @@
           <button type="submit" class="btn btn-success btn-small">Submit</button>
           <a href="/media" class="btn btn-default btn-small">Back to List</a> 
         </div>
+        {{ csrf_field() }}
       </form>
 
     </div>

@@ -8,6 +8,7 @@
     <form method="POST" style="display:inline" action="/siswa/delete">
       <input type="hidden" name="id_siswa" value="{{ $mahasiswa->id }}" />
       <button type="submit" class="btn btn-danger">Delete</button>
+      {{ csrf_field() }}
     </form>
 
     <a class="btn btn-default" href="/siswa">Back to List</a>
@@ -21,6 +22,12 @@
       <td>Nama Siswa</td>
       <td>: {{ $mahasiswa->name }}</td>
     </tr>
+    <td>Media</td>
+    <table class="table table-bordered">
+    <tr>
+      <td>: {{ $mahasiswa->media }}</td>
+    </tr>
+    </table>
   </table>
 </div>
 @endsection
